@@ -4,10 +4,93 @@
   padding: 0;
 }
 
+/* Error Message Styles */
+.error-message {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: linear-gradient(135deg, #ff616120, #ffa50020);
+    border-left: 5px solid #ff6161;
+    border-radius: 10px;
+    color: #dc2626;
+    font-size: 0.9rem;
+    animation: slideIn 0.3s ease;
+}
+
+.error-message strong {
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+/* Results Placeholder */
+.results-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+    color: #999;
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 2rem;
+    border: 2px dashed #e1e8f0;
+    border-radius: 15px;
+    background: #f8fafc;
+}
+
+/* Breakdown Styles */
+.breakdown {
+    margin: 1rem 0;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+}
+
+.breakdown-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    color: #555;
+    font-size: 0.95rem;
+}
+
+    .breakdown-item:last-child {
+        border-bottom: none;
+    }
+
+    .breakdown-item span:first-child {
+        font-weight: 500;
+    }
+
+    .breakdown-item span:last-child {
+        font-weight: 600;
+        color: #333;
+    }
+
+/* Animation for error messages */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Loading state improvements */
+.calculate-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+
 .App {
-  min-height: 100vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Header Styles */
